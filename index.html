@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>khxxk - Skins para osu!</title>
+    <title>hiro - Skins para osu!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -341,55 +341,30 @@
         }
         
         /* Commissions Section */
-        .commission-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .commission-card {
+        .commission-simple {
+            text-align: center;
+            padding: 40px;
             background: var(--gray);
             border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid var(--gray-light);
-            transition: all 0.3s ease;
+            border: 1px solid var(--purple);
+            margin-top: 30px;
         }
         
-        .commission-card:hover {
-            border-color: var(--purple);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+        .commission-simple h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
         
-        .commission-card h3 {
-            color: var(--purple-light);
-            margin-bottom: 15px;
-            font-size: 1.6rem;
-        }
-        
-        .price {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--white);
-            margin: 15px 0;
-        }
-        
-        .commission-features {
-            margin: 20px 0;
-            color: #ccc;
-        }
-        
-        .commission-features li {
-            margin-bottom: 10px;
-            list-style: none;
-        }
-        
-        .commission-features li::before {
-            content: '✓ ';
-            color: var(--purple-light);
-            font-weight: bold;
+        .discord-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--purple-dark);
+            padding: 15px 25px;
+            border-radius: 30px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
         
         /* Footer */
@@ -465,7 +440,7 @@
                 font-size: 1.3rem;
             }
             
-            .skins-grid, .commission-options {
+            .skins-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -499,15 +474,15 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-img">K</div>
-                    <div class="logo-text">khxxk</div>
+                    <div class="logo-img">H</div>
+                    <div class="logo-text">hiro</div>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">osu! Skins</a></li>
-                        <li><a href="#">Commissions</a></li>
-                        <li><a href="#">Sobre Mim</a></li>
+                        <li><a href="#skins">osu! Skins</a></li>
+                        <li><a href="#commissions">Commissions</a></li>
+                        <li><a href="#about">Sobre Mim</a></li>
                     </ul>
                 </nav>
             </div>
@@ -526,7 +501,7 @@
                 
                 <div>
                     <a href="#skins" class="btn">Ver Skins</a>
-                    <a href="#commissions" class="btn btn-outline">Encomendar</a>
+                    <a href="#commissions" class="btn btn-outline">Commissions</a>
                 </div>
             </div>
         </div>
@@ -534,7 +509,7 @@
     
     <main>
         <div class="container">
-            <section class="section">
+            <section id="skins" class="section">
                 <h2>osu! Skins</h2>
                 <p class="hero-description" style="text-align: center; margin-bottom: 30px;">
                     Confira algumas das skins mais populares da minha coleção
@@ -604,57 +579,22 @@
             
             <section id="commissions" class="section">
                 <h2>Commissions</h2>
-                <p class="hero-description" style="text-align: center; margin-bottom: 30px;">
-                    Encomende uma skin personalizada de acordo com suas preferências
-                </p>
                 
-                <div class="commission-options">
-                    <div class="commission-card">
-                        <h3>Pacote Básico</h3>
-                        <div class="price">R$ 30</div>
-                        <ul class="commission-features">
-                            <li>Customização de elementos principais</li>
-                            <li>3 revisões</li>
-                            <li>Entrega em 5 dias</li>
-                            <li>Suporte por 1 semana</li>
-                        </ul>
-                        <a href="#" class="btn">Encomendar</a>
-                    </div>
+                <div class="commission-simple">
+                    <h3>Para commissions, entre em contato pelo Discord</h3>
+                    <p>Vamos conversar sobre suas ideias e criar uma skin personalizada perfeita para você!</p>
                     
-                    <div class="commission-card">
-                        <h3>Pacote Premium</h3>
-                        <div class="price">R$ 50</div>
-                        <ul class="commission-features">
-                            <li>Customização completa</li>
-                            <li>Revisões ilimitadas</li>
-                            <li>Entrega em 7 dias</li>
-                            <li>Suporte por 2 semanas</li>
-                            <li>Elementos animados</li>
-                        </ul>
-                        <a href="#" class="btn">Encomendar</a>
-                    </div>
-                    
-                    <div class="commission-card">
-                        <h3>Pacote Ultimate</h3>
-                        <div class="price">R$ 80</div>
-                        <ul class="commission-features">
-                            <li>Customização completa premium</li>
-                            <li>Revisões ilimitadas</li>
-                            <li>Entrega prioritária (3 dias)</li>
-                            <li>Suporte por 1 mês</li>
-                            <li>Elementos animados exclusivos</li>
-                            <li>Pacote de extras</li>
-                        </ul>
-                        <a href="#" class="btn">Encomendar</a>
+                    <div class="discord-contact">
+                        <i class="fab fa-discord"></i> hiro
                     </div>
                 </div>
             </section>
             
-            <section class="section">
+            <section id="about" class="section">
                 <h2>Sobre Mim</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <h3>Olá, eu sou khxxk!</h3>
+                        <h3>Olá, eu sou hiro!</h3>
                         <p>
                             Sou um criador de skins para osu! com mais de 3 anos de experiência. 
                             Minha paixão é desenvolver skins que não apenas sejam visualmente atraentes, 
@@ -669,9 +609,6 @@
                             Trabalho com commissions personalizadas para que você possa ter uma skin 
                             única, feita especialmente para o seu estilo de jogo.
                         </p>
-                        <div style="margin-top: 25px;">
-                            <a href="#" class="btn">Entrar em Contato</a>
-                        </div>
                     </div>
                     <div class="about-image">
                         <div>Imagem do Criador</div>
@@ -685,21 +622,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
-                    <div class="logo-text">khxxk</div>
+                    <div class="logo-text">hiro</div>
                 </div>
                 
                 <div class="footer-links">
                     <a href="#">Home</a>
-                    <a href="#">osu! Skins</a>
-                    <a href="#">Commissions</a>
-                    <a href="#">Sobre Mim</a>
+                    <a href="#skins">osu! Skins</a>
+                    <a href="#commissions">Commissions</a>
+                    <a href="#about">Sobre Mim</a>
                 </div>
                 
                 <div class="discord-info">
-                    <i class="fab fa-discord"></i> Discord: khxxk
+                    <i class="fab fa-discord"></i> Discord: hiro
                 </div>
                 
-                <p class="copyright">© 2023 khxxk - Todos os direitos reservados</p>
+                <p class="copyright">© 2023 hiro - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
@@ -707,7 +644,7 @@
     <script>
         // Script para navegação entre seções
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Site khxxk carregado com sucesso!');
+            console.log('Site hiro carregado com sucesso!');
             
             // Navegação suave para âncoras
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
