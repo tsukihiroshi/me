@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySkins - Melhores Skins para osu!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff66a4;
+            --secondary: #cc4d85;
+            --accent: #ff99c8;
+            --dark: #33202a;
+            --light: #fff5f9;
+            --text: #4a2c3d;
+            --card-bg: #fff;
+            --shadow: rgba(204, 77, 133, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #fff5f9 0%, #ffe6f2 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary) 0%, var(--accent) 100%);
+            padding: 20px 0;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 20px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            color: var(--primary);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 30px;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px var(--shadow);
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 40px 0;
+        }
+        
+        .section {
+            background-color: var(--card-bg);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 5px 20px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            background-color: var(--light);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 20px 0 15px;
+            font-size: 1.5rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .about-text {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Skins Section */
+        .skins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .skin-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .skin-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+        
+        .skin-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .skin-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .skin-card:hover .skin-image img {
+            transform: scale(1.05);
+        }
+        
+        .skin-content {
+            padding: 20px;
+        }
+        
+        .skin-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .skin-description {
+            color: var(--text);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .skin-features {
+            margin: 15px 0;
+        }
+        
+        .skin-features li {
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .skin-download {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .skin-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px var(--shadow);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--primary) 0%, var(--accent) 100%);
+            text-align: center;
+            padding: 50px 0 30px;
+            color: white;
+            border-radius: 30px 30px 0 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            font-size: 1.3rem;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icons a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Decorative Elements */
+        .decorative {
+            font-size: 2.2rem;
+            margin: 20px 0;
+            color: var(--accent);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .heart {
+            color: var(--primary);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .stats {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .skins-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .stat-item {
+                min-width: 120px;
+                padding: 15px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://i.imgur.com/9E0RzB2.png" alt="Logo MySkins" class="logo-img">
+                    <div class="logo-text">MySkins</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Skins</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>As Melhores Skins para osu!</h1>
+                <p class="hero-subtitle">Customize sua experiência de jogo com skins incríveis</p>
+                <p class="hero-description">
+                    Descubra skins premium para osu! que melhoram sua jogabilidade e deixam 
+                    seu jogo com uma aparência única. Todas as skins são testadas e aprovadas 
+                    pela comunidade.
+                </p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Skins</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Downloads</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Avaliação</div>
+                    </div>
+                </div>
+                
+                <a href="#skins" class="btn">Ver Skins</a>
+            </div>
+        </div>
+    </section>
+    
+    <main>
+        <div class="container">
+            <section class="section">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Olá, eu sou [seu nome/apelido]!</h3>
+                        <p>
+                            Sou um entusiasta de osu! e criador de skins há mais de 3 anos. Minha paixão 
+                            é criar skins que não apenas sejam visualmente atraentes, mas que também 
+                            melhorem a experiência de jogo.
+                        </p>
+                        <p>
+                            Todas as skins que você encontra aqui foram cuidadosamente elaboradas e 
+                            testadas por jogadores experientes. Meu objetivo é compartilhar essas 
+                            criações com a comunidade e ajudar outros jogadores a terem uma experiência 
+                            mais agradável com o jogo.
+                        </p>
+                        <p>
+                            Além de criar skins, também faço reviews e tutoriais sobre customização 
+                            de osu! em meu canal do YouTube.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://i.imgur.com/3Q1Wt0B.jpeg" alt="Jogando osu!">
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skins" class="section">
+                <h2>Minhas Skins</h2>
+                <p class="center">Confira algumas das skins mais populares da coleção</p>
+                
+                <div class="skins-grid">
+                    <div class="skin-card">
+                        <div class="skin-image">
+                            <img src="https://i.imgur.com/5X2j6Lp.jpeg" alt="Skin 1">
+                        </div>
+                        <div class="skin-content">
+                            <h3 class="skin-title">Skin Minimalista</h3>
+                            <p class="skin-description">
+                                Uma skin limpa e moderna com design minimalista para melhorar sua 
+                                concentração durante o jogo.
+                            </p>
+                            <ul class="skin-features">
+                                <li>Interface limpa e organizada</li>
+                                <li>Cursor de alta visibilidade</li>
+                                <li>Hit circles minimalistas</li>
+                            </ul>
+                            <a href="#" class="skin-download">Download</a>
+                        </div>
+                    </div>
+                    
+                    <div class="skin-card">
+                        <div class="skin-image">
+                            <img src="https://i.imgur.com/8sJzOq2.jpeg" alt="Skin 2">
+                        </div>
+                        <div class="skin-content">
+                            <h3 class="skin-title">Skin Anime</h3>
+                            <p class="skin-description">
+                                Para os fãs de anime, esta skin traz seus personagens favoritos 
+                                para dentro do jogo.
+                            </p>
+                            <ul class="skin-features">
+                                <li>Elementos temáticos de anime</li>
+                                <li>Cursors personalizados</li>
+                                <li>Hit sounds únicos</li>
+                            </ul>
+                            <a href="#" class="skin-download">Download</a>
+                        </div>
+                    </div>
+                    
+                    <div class="skin-card">
+                        <div class="skin-image">
+                            <img src="https://i.imgur.com/9zJ7R2V.jpeg" alt="Skin 3">
+                        </div>
+                        <div class="skin-content">
+                            <h3 class="skin-title">Skin Profissional</h3>
+                            <p class="skin-description">
+                                Desenvolvida em colaboração com jogadores profissionais para 
+                                maximizar a performance.
+                            </p>
+                            <ul class="skin-features">
+                                <li>Otimizada para competição</li>
+                                <li>Elementos de alta visibilidade</li>
+                                <li>Feedback visual preciso</li>
+                            </ul>
+                            <a href="#" class="skin-download">Download</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center">
+                    <a href="#" class="btn">Ver Todas as Skins</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <div class="logo-text">MySkins</div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">Skins</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Privacidade</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+                
+                <p class="copyright">Feito com <span class="heart">♥</span> por [seu nome/apelido] | © 2023</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
