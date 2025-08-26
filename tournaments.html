@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiro - Tournaments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --dark: #121212;
+            --white: #ffffff;
+            --purple: #8a2be2;
+            --purple-light: #9370db;
+            --purple-dark: #6a0dad;
+            --gray: #1e1e1e;
+            --gray-light: #2d2d2d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--dark);
+            padding: 20px 0;
+            border-bottom: 2px solid var(--purple);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--purple-light), var(--white));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--purple);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--purple-light);
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--purple-light);
+            text-decoration: none;
+            margin: 30px 0;
+            font-weight: 500;
+        }
+        
+        /* Content */
+        .content {
+            background: var(--dark);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid var(--gray);
+        }
+        
+        h1 {
+            color: var(--purple-light);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--white);
+            margin: 25px 0 15px;
+        }
+        
+        p {
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        ul {
+            color: #ccc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .divider {
+            height: 1px;
+            background: var(--gray);
+            margin: 30px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            text-align: center;
+            padding: 40px 0;
+            color: #ccc;
+            border-top: 2px solid var(--purple);
+            margin-top: 60px;
+        }
+        
+        .discord-info {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--gray);
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-img">H</div>
+                    <div class="logo-text">hiro</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="skins.html">Skins</a></li>
+                        <li><a href="#" class="active">Tournaments</a></li>
+                        <li><a href="commissions.html">Commissions</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+        
+        <div class="content">
+            <h1>Tournaments</h1>
+            
+            <h2>Skins</h2>
+            <ul>
+                <li>Contact me</li>
+                <li>Commissions (soon)</li>
+            </ul>
+            
+            <div class="divider"></div>
+            
+            <p>Para designs de torneios personalizados, entre em contato pelo Discord:</p>
+            
+            <div class="discord-info">
+                <i class="fab fa-discord"></i> Discord: hiro
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="discord-info">
+                <i class="fab fa-discord"></i> Discord: hiro
+            </div>
+            <p>© 2023 hiro - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
