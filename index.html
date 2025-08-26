@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hiro - Skins para osu!</title>
+    <title>hiro - Página Principal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -229,142 +229,43 @@
             font-size: 1.5rem;
         }
         
-        /* About Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-top: 30px;
-        }
-        
-        .about-text {
-            flex: 1;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #ccc;
-        }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--gray);
-        }
-        
-        .about-image div {
-            background: linear-gradient(45deg, var(--gray), var(--gray-light));
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--purple-light);
-            font-size: 1.2rem;
-        }
-        
-        /* Skins Section */
-        .skins-grid {
+        /* Page Links */
+        .page-links {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
         
-        .skin-card {
+        .page-card {
             background: var(--gray);
             border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px 30px;
+            text-align: center;
             transition: all 0.3s ease;
             border: 1px solid var(--gray-light);
         }
         
-        .skin-card:hover {
+        .page-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2);
             border-color: var(--purple);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2);
         }
         
-        .skin-image {
-            height: 200px;
-            overflow: hidden;
-            background: linear-gradient(45deg, var(--gray-light), var(--gray));
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .page-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
             color: var(--purple-light);
         }
         
-        .skin-content {
-            padding: 25px;
-        }
-        
-        .skin-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-        
-        .skin-description {
-            color: #ccc;
+        .page-card h3 {
+            font-size: 1.8rem;
             margin-bottom: 15px;
-            line-height: 1.6;
         }
         
-        .skin-features {
-            margin: 15px 0;
-            color: #aaa;
-        }
-        
-        .skin-features li {
-            margin-left: 20px;
-            margin-bottom: 5px;
-        }
-        
-        .skin-download {
-            display: inline-block;
-            background: linear-gradient(to right, var(--purple), var(--purple-dark));
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 10px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-        
-        .skin-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
-        }
-        
-        /* Commissions Section */
-        .commission-simple {
-            text-align: center;
-            padding: 40px;
-            background: var(--gray);
-            border-radius: 15px;
-            border: 1px solid var(--purple);
-            margin-top: 30px;
-        }
-        
-        .commission-simple h3 {
-            font-size: 2rem;
+        .page-card p {
+            color: #ccc;
             margin-bottom: 20px;
-        }
-        
-        .discord-contact {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--purple-dark);
-            padding: 15px 25px;
-            border-radius: 30px;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            font-weight: 500;
         }
         
         /* Footer */
@@ -440,7 +341,7 @@
                 font-size: 1.3rem;
             }
             
-            .skins-grid {
+            .page-links {
                 grid-template-columns: 1fr;
             }
             
@@ -480,9 +381,9 @@
                 <nav>
                     <ul>
                         <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#skins">osu! Skins</a></li>
-                        <li><a href="#commissions">Commissions</a></li>
-                        <li><a href="#about">Sobre Mim</a></li>
+                        <li><a href="skins.html">Skins</a></li>
+                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="commissions.html">Commissions</a></li>
                     </ul>
                 </nav>
             </div>
@@ -498,120 +399,55 @@
                     Descubra skins premium para osu! que combinam design elegante e funcionalidade. 
                     Cada skin é cuidadosamente elaborada para melhorar sua experiência de jogo.
                 </p>
-                
-                <div>
-                    <a href="#skins" class="btn">Ver Skins</a>
-                    <a href="#commissions" class="btn btn-outline">Commissions</a>
-                </div>
             </div>
         </div>
     </section>
     
     <main>
         <div class="container">
-            <section id="skins" class="section">
-                <h2>osu! Skins</h2>
-                <p class="hero-description" style="text-align: center; margin-bottom: 30px;">
-                    Confira algumas das skins mais populares da minha coleção
-                </p>
+            <section class="section">
+                <h2>Bem-vindo ao meu site</h2>
                 
-                <div class="skins-grid">
-                    <div class="skin-card">
-                        <div class="skin-image">
-                            Preview da Skin 1
+                <div class="page-links">
+                    <div class="page-card">
+                        <div class="page-icon">
+                            <i class="fas fa-paint-brush"></i>
                         </div>
-                        <div class="skin-content">
-                            <h3 class="skin-title">Skin Minimalista</h3>
-                            <p class="skin-description">
-                                Uma skin limpa e moderna com design minimalista para melhorar sua 
-                                concentração durante o jogo.
-                            </p>
-                            <ul class="skin-features">
-                                <li>Interface limpa e organizada</li>
-                                <li>Cursor de alta visibilidade</li>
-                                <li>Hit circles minimalistas</li>
-                            </ul>
-                            <a href="#" class="skin-download">Download</a>
-                        </div>
+                        <h3>Skins</h3>
+                        <p>Confira minha coleção de skins para osu! com designs únicos e funcionais.</p>
+                        <a href="skins.html" class="btn">Ver Skins</a>
                     </div>
                     
-                    <div class="skin-card">
-                        <div class="skin-image">
-                            Preview da Skin 2
+                    <div class="page-card">
+                        <div class="page-icon">
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <div class="skin-content">
-                            <h3 class="skin-title">Skin Profissional</h3>
-                            <p class="skin-description">
-                                Desenvolvida para maximizar a performance em jogos competitivos.
-                            </p>
-                            <ul class="skin-features">
-                                <li>Otimizada para competição</li>
-                                <li>Elementos de alta visibilidade</li>
-                                <li>Feedback visual preciso</li>
-                            </ul>
-                            <a href="#" class="skin-download">Download</a>
-                        </div>
+                        <h3>Tournaments</h3>
+                        <p>Designs para torneios de osu! incluindo banners e elementos visuais.</p>
+                        <a href="tournaments.html" class="btn">Ver Tournaments</a>
                     </div>
                     
-                    <div class="skin-card">
-                        <div class="skin-image">
-                            Preview da Skin 3
+                    <div class="page-card">
+                        <div class="page-icon">
+                            <i class="fas fa-star"></i>
                         </div>
-                        <div class="skin-content">
-                            <h3 class="skin-title">Skin Dark Purple</h3>
-                            <p class="skin-description">
-                                Tema escuro com elementos roxos para uma experiência visual imersiva.
-                            </p>
-                            <ul class="skin-features">
-                                <li>Tema escuro com detalhes roxos</li>
-                                <li>Animações suaves</li>
-                                <li>Elementos customizados</li>
-                            </ul>
-                            <a href="#" class="skin-download">Download</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="#" class="btn">Ver Todas as Skins</a>
-                </div>
-            </section>
-            
-            <section id="commissions" class="section">
-                <h2>Commissions</h2>
-                
-                <div class="commission-simple">
-                    <h3>Para commissions, entre em contato pelo Discord</h3>
-                    <p>Vamos conversar sobre suas ideias e criar uma skin personalizada perfeita para você!</p>
-                    
-                    <div class="discord-contact">
-                        <i class="fab fa-discord"></i> hiro
+                        <h3>Commissions</h3>
+                        <p>Encomende uma skin personalizada de acordo com suas preferências.</p>
+                        <a href="commissions.html" class="btn">Ver Commissions</a>
                     </div>
                 </div>
             </section>
             
-            <section id="about" class="section">
+            <section class="section">
                 <h2>Sobre Mim</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Olá, eu sou hiro!</h3>
-                        <p>
-                            Sou um criador de skins para osu! com mais de 3 anos de experiência. 
-                            Minha paixão é desenvolver skins que não apenas sejam visualmente atraentes, 
-                            mas que também melhorem a jogabilidade e a experiência do usuário.
-                        </p>
-                        <p>
-                            Cada skin que eu crio é cuidadosamente planejada e testada para garantir 
-                            que atenda às necessidades dos jogadores. Meu objetivo é unir estética e 
-                            funcionalidade em cada projeto.
-                        </p>
-                        <p>
-                            Trabalho com commissions personalizadas para que você possa ter uma skin 
-                            única, feita especialmente para o seu estilo de jogo.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <div>Imagem do Criador</div>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <p style="color: #ccc; line-height: 1.8; margin-bottom: 30px;">
+                        Sou um criador de skins para osu! com mais de 3 anos de experiência. 
+                        Minha paixão é desenvolver skins que não apenas sejam visualmente atraentes, 
+                        mas que também melhorem a jogabilidade e a experiência do usuário.
+                    </p>
+                    <div class="discord-info">
+                        <i class="fab fa-discord"></i> Discord: hiro
                     </div>
                 </div>
             </section>
@@ -627,9 +463,9 @@
                 
                 <div class="footer-links">
                     <a href="#">Home</a>
-                    <a href="#skins">osu! Skins</a>
-                    <a href="#commissions">Commissions</a>
-                    <a href="#about">Sobre Mim</a>
+                    <a href="skins.html">Skins</a>
+                    <a href="tournaments.html">Tournaments</a>
+                    <a href="commissions.html">Commissions</a>
                 </div>
                 
                 <div class="discord-info">
@@ -642,26 +478,9 @@
     </footer>
 
     <script>
-        // Script para navegação entre seções
+        // Script para navegação
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Site hiro carregado com sucesso!');
-            
-            // Navegação suave para âncoras
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 100,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
             
             // Efeito de digitação no título
             const title = document.querySelector('h1');
