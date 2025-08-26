@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySkins - Melhores Skins para osu!</title>
+    <title>khxxk - Skins para osu!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #ff66a4;
-            --secondary: #cc4d85;
-            --accent: #ff99c8;
-            --dark: #33202a;
-            --light: #fff5f9;
-            --text: #4a2c3d;
-            --card-bg: #fff;
-            --shadow: rgba(204, 77, 133, 0.2);
+            --black: #0a0a0a;
+            --dark: #121212;
+            --white: #ffffff;
+            --purple: #8a2be2;
+            --purple-light: #9370db;
+            --purple-dark: #6a0dad;
+            --gray: #1e1e1e;
+            --gray-light: #2d2d2d;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #fff5f9 0%, #ffe6f2 100%);
-            color: var(--text);
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
@@ -43,31 +43,18 @@
         
         /* Header */
         header {
-            background: linear-gradient(to right, var(--primary) 0%, var(--accent) 100%);
+            background-color: var(--dark);
             padding: 20px 0;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 4px 20px var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: "";
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
+            border-bottom: 2px solid var(--purple);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
         .header-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: relative;
-            z-index: 1;
         }
         
         .logo {
@@ -77,45 +64,66 @@
         }
         
         .logo-img {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .logo-text {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
             font-weight: 800;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, var(--purple-light), var(--white));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 30px;
         }
         
         nav a {
             text-decoration: none;
-            color: white;
-            font-weight: 600;
-            padding: 8px 15px;
-            border-radius: 20px;
+            color: var(--white);
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
             transition: all 0.3s ease;
         }
         
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--purple);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+        
         nav a:hover, nav a.active {
-            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--purple-light);
         }
         
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 80px 0 60px;
-            position: relative;
+            padding: 100px 0 80px;
+            background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23121212"/><path d="M0 50 L100 50 M50 0 L50 100" stroke="%23222" stroke-width="1"/></svg>');
+            background-size: 30px;
         }
         
         .hero-content {
@@ -124,15 +132,18 @@
         }
         
         h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.5rem;
             margin: 20px 0;
-            color: var(--primary);
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to right, var(--purple-light), var(--white));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
         }
         
         .hero-subtitle {
             font-size: 1.5rem;
-            color: var(--secondary);
+            color: var(--purple-light);
             margin-bottom: 30px;
         }
         
@@ -140,76 +151,81 @@
             font-size: 1.1rem;
             margin-bottom: 40px;
             line-height: 1.8;
+            color: #ccc;
         }
         
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
-        }
-        
-        .stat-item {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px var(--shadow);
-            text-align: center;
-            min-width: 150px;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        .stat-label {
-            color: var(--secondary);
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--purple), var(--purple-dark));
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
             font-weight: 600;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--purple);
+            color: var(--purple-light);
+        }
+        
+        .btn-outline:hover {
+            background: var(--purple);
+            color: white;
         }
         
         /* Main Content */
         main {
             flex: 1;
-            padding: 40px 0;
+            padding: 60px 0;
         }
         
         .section {
-            background-color: var(--card-bg);
-            border-radius: 25px;
-            padding: 40px;
+            background-color: var(--dark);
+            border-radius: 15px;
+            padding: 50px;
             margin: 40px 0;
-            box-shadow: 0 5px 20px var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .section::before {
-            content: "";
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 80px;
-            height: 80px;
-            background-color: var(--light);
-            border-radius: 50%;
-            z-index: 0;
+            border: 1px solid var(--gray);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
         
         h2 {
-            color: var(--primary);
-            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--white);
+            margin-bottom: 40px;
             text-align: center;
             font-size: 2.5rem;
             position: relative;
-            z-index: 1;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--purple), var(--purple-dark));
+            border-radius: 3px;
         }
         
         h3 {
-            color: var(--secondary);
-            margin: 20px 0 15px;
+            color: var(--purple-light);
+            margin: 25px 0 15px;
             font-size: 1.5rem;
         }
         
@@ -217,7 +233,7 @@
         .about-content {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 50px;
             margin-top: 30px;
         }
         
@@ -225,19 +241,25 @@
             flex: 1;
             font-size: 1.1rem;
             line-height: 1.8;
+            color: #ccc;
         }
         
         .about-image {
             flex: 1;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 8px 25px var(--shadow);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--gray);
         }
         
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .about-image div {
+            background: linear-gradient(45deg, var(--gray), var(--gray-light));
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--purple-light);
+            font-size: 1.2rem;
         }
         
         /* Skins Section */
@@ -249,52 +271,50 @@
         }
         
         .skin-card {
-            background: var(--card-bg);
-            border-radius: 20px;
+            background: var(--gray);
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 8px 20px var(--shadow);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
+            border: 1px solid var(--gray-light);
         }
         
         .skin-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px var(--shadow);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.2);
+            border-color: var(--purple);
         }
         
         .skin-image {
             height: 200px;
             overflow: hidden;
-        }
-        
-        .skin-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .skin-card:hover .skin-image img {
-            transform: scale(1.05);
+            background: linear-gradient(45deg, var(--gray-light), var(--gray));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--purple-light);
         }
         
         .skin-content {
-            padding: 20px;
+            padding: 25px;
         }
         
         .skin-title {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.4rem;
-            color: var(--primary);
+            color: var(--white);
             margin-bottom: 10px;
         }
         
         .skin-description {
-            color: var(--text);
+            color: #ccc;
             margin-bottom: 15px;
             line-height: 1.6;
         }
         
         .skin-features {
             margin: 15px 0;
+            color: #aaa;
         }
         
         .skin-features li {
@@ -304,54 +324,81 @@
         
         .skin-download {
             display: inline-block;
-            background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(to right, var(--purple), var(--purple-dark));
             color: white;
             padding: 10px 20px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
             margin-top: 10px;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
         
         .skin-download:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px var(--shadow);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
         }
         
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 14px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px var(--shadow);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
+        /* Commissions Section */
+        .commission-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
         
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px var(--shadow);
-        }
-        
-        .center {
+        .commission-card {
+            background: var(--gray);
+            border-radius: 15px;
+            padding: 30px;
             text-align: center;
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+        
+        .commission-card:hover {
+            border-color: var(--purple);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+        }
+        
+        .commission-card h3 {
+            color: var(--purple-light);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+        
+        .price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin: 15px 0;
+        }
+        
+        .commission-features {
+            margin: 20px 0;
+            color: #ccc;
+        }
+        
+        .commission-features li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        
+        .commission-features li::before {
+            content: '✓ ';
+            color: var(--purple-light);
+            font-weight: bold;
         }
         
         /* Footer */
         footer {
-            background: linear-gradient(to right, var(--primary) 0%, var(--accent) 100%);
+            background-color: var(--dark);
             text-align: center;
             padding: 50px 0 30px;
-            color: white;
-            border-radius: 30px 30px 0 0;
+            color: #ccc;
+            border-top: 2px solid var(--purple);
             margin-top: 60px;
         }
         
@@ -368,39 +415,21 @@
         }
         
         .footer-links a {
-            color: white;
+            color: #ccc;
             text-decoration: none;
             transition: all 0.3s ease;
         }
         
         .footer-links a:hover {
-            text-decoration: underline;
+            color: var(--purple-light);
         }
         
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .discord-info {
             margin: 30px 0;
-        }
-        
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            font-size: 1.3rem;
-            color: white;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .social-icons a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
+            padding: 15px;
+            background: var(--gray);
+            border-radius: 10px;
+            display: inline-block;
         }
         
         .copyright {
@@ -409,35 +438,10 @@
             opacity: 0.8;
         }
         
-        /* Decorative Elements */
-        .decorative {
-            font-size: 2.2rem;
-            margin: 20px 0;
-            color: var(--accent);
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .heart {
-            color: var(--primary);
-            animation: pulse 1.5s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-        
         /* Responsividade */
         @media (max-width: 900px) {
             .about-content {
                 flex-direction: column;
-            }
-            
-            .stats {
-                flex-wrap: wrap;
             }
         }
         
@@ -450,7 +454,7 @@
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 10px;
+                gap: 15px;
             }
             
             h1 {
@@ -461,8 +465,12 @@
                 font-size: 1.3rem;
             }
             
-            .skins-grid {
+            .skins-grid, .commission-options {
                 grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 30px;
             }
         }
         
@@ -475,17 +483,13 @@
                 font-size: 2rem;
             }
             
-            .section {
-                padding: 25px;
+            h2 {
+                font-size: 1.8rem;
             }
             
-            .stat-item {
-                min-width: 120px;
-                padding: 15px;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
+            .btn {
+                padding: 12px 25px;
+                margin: 10px 5px;
             }
         }
     </style>
@@ -495,15 +499,15 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="https://i.imgur.com/9E0RzB2.png" alt="Logo MySkins" class="logo-img">
-                    <div class="logo-text">MySkins</div>
+                    <div class="logo-img">K</div>
+                    <div class="logo-text">khxxk</div>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">Skins</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">osu! Skins</a></li>
+                        <li><a href="#">Commissions</a></li>
+                        <li><a href="#">Sobre Mim</a></li>
                     </ul>
                 </nav>
             </div>
@@ -513,30 +517,17 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>As Melhores Skins para osu!</h1>
-                <p class="hero-subtitle">Customize sua experiência de jogo com skins incríveis</p>
+                <h1>Skins de osu! Personalizadas</h1>
+                <p class="hero-subtitle">Estilo único e desempenho superior para seu jogo</p>
                 <p class="hero-description">
-                    Descubra skins premium para osu! que melhoram sua jogabilidade e deixam 
-                    seu jogo com uma aparência única. Todas as skins são testadas e aprovadas 
-                    pela comunidade.
+                    Descubra skins premium para osu! que combinam design elegante e funcionalidade. 
+                    Cada skin é cuidadosamente elaborada para melhorar sua experiência de jogo.
                 </p>
                 
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Skins</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10K+</div>
-                        <div class="stat-label">Downloads</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4.9</div>
-                        <div class="stat-label">Avaliação</div>
-                    </div>
+                <div>
+                    <a href="#skins" class="btn">Ver Skins</a>
+                    <a href="#commissions" class="btn btn-outline">Encomendar</a>
                 </div>
-                
-                <a href="#skins" class="btn">Ver Skins</a>
             </div>
         </div>
     </section>
@@ -544,40 +535,15 @@
     <main>
         <div class="container">
             <section class="section">
-                <h2>Sobre Mim</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Olá, eu sou [seu nome/apelido]!</h3>
-                        <p>
-                            Sou um entusiasta de osu! e criador de skins há mais de 3 anos. Minha paixão 
-                            é criar skins que não apenas sejam visualmente atraentes, mas que também 
-                            melhorem a experiência de jogo.
-                        </p>
-                        <p>
-                            Todas as skins que você encontra aqui foram cuidadosamente elaboradas e 
-                            testadas por jogadores experientes. Meu objetivo é compartilhar essas 
-                            criações com a comunidade e ajudar outros jogadores a terem uma experiência 
-                            mais agradável com o jogo.
-                        </p>
-                        <p>
-                            Além de criar skins, também faço reviews e tutoriais sobre customização 
-                            de osu! em meu canal do YouTube.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://i.imgur.com/3Q1Wt0B.jpeg" alt="Jogando osu!">
-                    </div>
-                </div>
-            </section>
-            
-            <section id="skins" class="section">
-                <h2>Minhas Skins</h2>
-                <p class="center">Confira algumas das skins mais populares da coleção</p>
+                <h2>osu! Skins</h2>
+                <p class="hero-description" style="text-align: center; margin-bottom: 30px;">
+                    Confira algumas das skins mais populares da minha coleção
+                </p>
                 
                 <div class="skins-grid">
                     <div class="skin-card">
                         <div class="skin-image">
-                            <img src="https://i.imgur.com/5X2j6Lp.jpeg" alt="Skin 1">
+                            Preview da Skin 1
                         </div>
                         <div class="skin-content">
                             <h3 class="skin-title">Skin Minimalista</h3>
@@ -596,32 +562,12 @@
                     
                     <div class="skin-card">
                         <div class="skin-image">
-                            <img src="https://i.imgur.com/8sJzOq2.jpeg" alt="Skin 2">
-                        </div>
-                        <div class="skin-content">
-                            <h3 class="skin-title">Skin Anime</h3>
-                            <p class="skin-description">
-                                Para os fãs de anime, esta skin traz seus personagens favoritos 
-                                para dentro do jogo.
-                            </p>
-                            <ul class="skin-features">
-                                <li>Elementos temáticos de anime</li>
-                                <li>Cursors personalizados</li>
-                                <li>Hit sounds únicos</li>
-                            </ul>
-                            <a href="#" class="skin-download">Download</a>
-                        </div>
-                    </div>
-                    
-                    <div class="skin-card">
-                        <div class="skin-image">
-                            <img src="https://i.imgur.com/9zJ7R2V.jpeg" alt="Skin 3">
+                            Preview da Skin 2
                         </div>
                         <div class="skin-content">
                             <h3 class="skin-title">Skin Profissional</h3>
                             <p class="skin-description">
-                                Desenvolvida em colaboração com jogadores profissionais para 
-                                maximizar a performance.
+                                Desenvolvida para maximizar a performance em jogos competitivos.
                             </p>
                             <ul class="skin-features">
                                 <li>Otimizada para competição</li>
@@ -631,10 +577,105 @@
                             <a href="#" class="skin-download">Download</a>
                         </div>
                     </div>
+                    
+                    <div class="skin-card">
+                        <div class="skin-image">
+                            Preview da Skin 3
+                        </div>
+                        <div class="skin-content">
+                            <h3 class="skin-title">Skin Dark Purple</h3>
+                            <p class="skin-description">
+                                Tema escuro com elementos roxos para uma experiência visual imersiva.
+                            </p>
+                            <ul class="skin-features">
+                                <li>Tema escuro com detalhes roxos</li>
+                                <li>Animações suaves</li>
+                                <li>Elementos customizados</li>
+                            </ul>
+                            <a href="#" class="skin-download">Download</a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="center">
+                <div style="text-align: center; margin-top: 40px;">
                     <a href="#" class="btn">Ver Todas as Skins</a>
+                </div>
+            </section>
+            
+            <section id="commissions" class="section">
+                <h2>Commissions</h2>
+                <p class="hero-description" style="text-align: center; margin-bottom: 30px;">
+                    Encomende uma skin personalizada de acordo com suas preferências
+                </p>
+                
+                <div class="commission-options">
+                    <div class="commission-card">
+                        <h3>Pacote Básico</h3>
+                        <div class="price">R$ 30</div>
+                        <ul class="commission-features">
+                            <li>Customização de elementos principais</li>
+                            <li>3 revisões</li>
+                            <li>Entrega em 5 dias</li>
+                            <li>Suporte por 1 semana</li>
+                        </ul>
+                        <a href="#" class="btn">Encomendar</a>
+                    </div>
+                    
+                    <div class="commission-card">
+                        <h3>Pacote Premium</h3>
+                        <div class="price">R$ 50</div>
+                        <ul class="commission-features">
+                            <li>Customização completa</li>
+                            <li>Revisões ilimitadas</li>
+                            <li>Entrega em 7 dias</li>
+                            <li>Suporte por 2 semanas</li>
+                            <li>Elementos animados</li>
+                        </ul>
+                        <a href="#" class="btn">Encomendar</a>
+                    </div>
+                    
+                    <div class="commission-card">
+                        <h3>Pacote Ultimate</h3>
+                        <div class="price">R$ 80</div>
+                        <ul class="commission-features">
+                            <li>Customização completa premium</li>
+                            <li>Revisões ilimitadas</li>
+                            <li>Entrega prioritária (3 dias)</li>
+                            <li>Suporte por 1 mês</li>
+                            <li>Elementos animados exclusivos</li>
+                            <li>Pacote de extras</li>
+                        </ul>
+                        <a href="#" class="btn">Encomendar</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Olá, eu sou khxxk!</h3>
+                        <p>
+                            Sou um criador de skins para osu! com mais de 3 anos de experiência. 
+                            Minha paixão é desenvolver skins que não apenas sejam visualmente atraentes, 
+                            mas que também melhorem a jogabilidade e a experiência do usuário.
+                        </p>
+                        <p>
+                            Cada skin que eu crio é cuidadosamente planejada e testada para garantir 
+                            que atenda às necessidades dos jogadores. Meu objetivo é unir estética e 
+                            funcionalidade em cada projeto.
+                        </p>
+                        <p>
+                            Trabalho com commissions personalizadas para que você possa ter uma skin 
+                            única, feita especialmente para o seu estilo de jogo.
+                        </p>
+                        <div style="margin-top: 25px;">
+                            <a href="#" class="btn">Entrar em Contato</a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div>Imagem do Criador</div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -644,27 +685,63 @@
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
-                    <div class="logo-text">MySkins</div>
+                    <div class="logo-text">khxxk</div>
                 </div>
                 
                 <div class="footer-links">
                     <a href="#">Home</a>
-                    <a href="#">Skins</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
-                    <a href="#">Privacidade</a>
+                    <a href="#">osu! Skins</a>
+                    <a href="#">Commissions</a>
+                    <a href="#">Sobre Mim</a>
                 </div>
                 
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-discord"></i></a>
+                <div class="discord-info">
+                    <i class="fab fa-discord"></i> Discord: khxxk
                 </div>
                 
-                <p class="copyright">Feito com <span class="heart">♥</span> por [seu nome/apelido] | © 2023</p>
+                <p class="copyright">© 2023 khxxk - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Script para navegação entre seções
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Site khxxk carregado com sucesso!');
+            
+            // Navegação suave para âncoras
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Efeito de digitação no título
+            const title = document.querySelector('h1');
+            const originalText = title.textContent;
+            title.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    title.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            
+            setTimeout(typeWriter, 500);
+        });
+    </script>
 </body>
 </html>
